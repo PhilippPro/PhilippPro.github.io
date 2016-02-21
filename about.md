@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Master of Science in Statistics at TU Dortmund
 
-### More Information
+Currently PhD Student at LMU Munich
 
-A place to include any other types of information that you'd like to include about yourself.
+
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[philipp_probst@gmx.de](mailto:philipp_probst@gmx.de)
