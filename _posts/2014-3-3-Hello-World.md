@@ -1,3 +1,8 @@
+---
+layout: page
+title: First Post
+---
+
 Hello out there!
 
 This is my first blog post on this blog.
