@@ -8,15 +8,3 @@ Hello out there!
 This is my first blog post on this blog.
 
 I will post here regularly about topics related to tree-based methods in machine learning.
-
-Some wall of text:
-
-I will post here regularly about topics related to tree-based methods in machine learning.
-
-I will post here regularly about topics related to tree-based methods in machine learning.
-
-I will post here regularly about topics related to tree-based methods in machine learning.
-
-I will post here regularly about topics related to tree-based methods in machine learning.
-
-I will post here regularly about topics related to tree-based methods in machine learning.
