@@ -10,7 +10,7 @@ Random forests are suitable in many different modeling cases, such as classifica
 multivariate classification and regression, multilabel classification and quantile regression. 
 
 A overview of existing random forest implementation and their speed performance can be found in 
-http://arxiv.org/pdf/1508.04409v1.pdf, altough this list is not exhaustive and many new implementations are comming up. 
+[[http://arxiv.org/pdf/1508.04409v1.pdf]], altough this list is not exhaustive and many new implementations are comming up. 
 The performances of models build with different packages slightly differ, depending on how the random forest algorithm was 
 implemented. 
 
