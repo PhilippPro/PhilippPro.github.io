@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Random Forest in R
+comment: true
+tags:  [R], [Random Forest]
 ---
 
 Random forests were formally introduced by Breiman in 2001. Due to his excellent performance and simple application, 
