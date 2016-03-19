@@ -37,19 +37,27 @@ randomForest. Wright (the author of ranger) recommends to use Rborist for
 low dimensional data with large sample sizes (n>25,000)  and ranger in all other cases. 
 The core of ranger is written with help of the R-package Rcpp and it generally produces the same results as randomForest. 
 
+## Multivariate Classification and Regression
+
 Multivariate classifications and regressions with random forests can be modelled with randomForestSRC. 
 The multivariate classification case in randomForestSRC is used in mlr to perform multilabel classifications with random 
 forests (http://mlr-org.github.io/mlr-tutorial/devel/html/multilabel/index.html). 
 Moreover in the randomForestSRC package many hyperparameters can be set individually like for example the splitting 
 rule. 
 
+## Survival Analysis
+
 If you want a random forest for survival analysis, ranger or randomForestSRC can be used.
 party contains the function cforest which implements the random forest and bagging ensemble algorithms utilizing 
 conditional inference trees as base learners. 
 
+## Quantile Regression
+
 For quantile regression you can use the package quantregForest, which is 
 based on the randomForest package. This implementation could also be used for estimating conditional 
 densities and conditional probability distributions. 
+
+## More
 
 Many more packages exist with new algorithms based on random forests (RRF, roughrf, icRSF (for survival), wsrf, iRafnet, 
 randomUniformForest, fuzzyforest), possibilities for variable selection (varSelRF, VSURF, RFgroove, AUCRF), visualisations (ggRandomForests, forestFloor) or 
