@@ -39,7 +39,7 @@ footer-links:
   comments :
     provider : disqus
     disqus :
-      short_name : philippprobst
+      short_name : githubblogphilipppro
     livefyre :
       site_id : 123
     intensedebate :
