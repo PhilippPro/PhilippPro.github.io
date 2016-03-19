@@ -40,7 +40,7 @@ The core of **ranger** is written with help of the R-package **Rcpp** and it gen
 ## Multivariate Classification and Regression
 
 Multivariate classifications and regressions with random forests can be modelled with **randomForestSRC**. 
-The multivariate classification case in **randomForestSRC** is used in **mlr** package to perform multilabel classifications with random forests, see the [mlr tutorial](http://mlr-org.github.io/mlr-tutorial/devel/html/multilabel/index.html). 
+The multivariate classification case in **randomForestSRC** is used in **mlr** package to perform multilabel classifications with random forests, see the [mlr tutorial](http://mlr-org.github.io/mlr-tutorial/devel/html/multilabel/index.html) for more information. 
 Moreover in the **randomForestSRC** package many hyperparameters can be set individually like for example the splitting 
 rule. 
 
