@@ -19,7 +19,7 @@ http://www.r-pkg.org/.
 
 A statistic about the RStudio downloads of different R-packages for executing the random forest 
 can be seen in the table. It was created with help of the R-package cranlogs.
-randomForest is clearly the most used package in R, probably because it was the first available already in April 2002. 
+`randomForest` is clearly the most used package in R, probably because it was the first available already in April 2002. 
  
  **package**              |  **RStudio downloads in the last month**
  -------------        |  -------------:
