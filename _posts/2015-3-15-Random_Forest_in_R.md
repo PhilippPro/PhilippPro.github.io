@@ -4,7 +4,7 @@ title: Random Forest in R
 comments: True
 ---
 
-dum Random forests were formally introduced by Breiman in 2001. Due to his excellent performance and simple application, 
+Random forests were formally introduced by Breiman in 2001. Due to his excellent performance and simple application, 
 random forests are getting a more and more popular modeling strategy in many different research areas. 
 
 Random forests are suitable in many different modeling cases, such as classification, regression, survival time analysis, 
