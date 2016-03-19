@@ -15,7 +15,7 @@ the [ranger documentation](http://arxiv.org/pdf/1508.04409v1.pdf), altough this 
 The performances of models build with different packages slightly differ, depending on how the random forest algorithm was 
 implemented. 
 
-Now I will present some random forest implementation in R. A good site to find all r packages to one specific topic is 
+Now I will present some random forest implementation in R. A good site to find all R packages to one specific topic is 
 [Metacran](http://www.r-pkg.org/).
 
 <!--excerpt-->
