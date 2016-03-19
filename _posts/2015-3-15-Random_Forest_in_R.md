@@ -10,7 +10,7 @@ random forests are getting a more and more popular modeling strategy in many dif
 Random forests are suitable in many different modeling cases, such as classification, regression, survival time analysis, 
 multivariate classification and regression, multilabel classification and quantile regression. 
 
-A overview of existing random forest implementations and their speed performance can be found in 
+An overview of existing random forest implementations and their speed performance can be found in 
 the [ranger documentation](http://arxiv.org/pdf/1508.04409v1.pdf), altough this list is not exhaustive and many new implementations are comming up. 
 The performances of models build with different packages slightly differ, depending on how the random forest algorithm was 
 implemented. 
@@ -21,7 +21,7 @@ Now I will present some random forest implementation in R. A good site to find a
 <!--excerpt-->
 
 A statistic about the RStudio downloads of different R-packages for executing the random forest 
-can be seen in the table. It was created with help of the R-package cranlogs.
+can be seen in the table. It was created with help of the R-package **cranlogs**.
 **randomForest** is clearly the most used package in R, probably because it was the first available already in April 2002. 
  
  **package**              |  **RStudio downloads in the last month**
