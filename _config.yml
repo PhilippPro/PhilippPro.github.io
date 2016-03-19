@@ -76,3 +76,6 @@ exclude:
     - LICENSE
     - README.md
     - CNAME
+
+# More settings
+excerpt_separator: "<!--excerpt-->"
