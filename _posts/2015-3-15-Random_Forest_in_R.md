@@ -21,14 +21,14 @@ A statistic about the RStudio downloads of different R-packages for executing th
 can be seen in the table. It was created with help of the R-package cranlogs.
 randomForest is clearly the most used package in R, probably because it was the first available already in April 2002. 
  
- package  |  Number of downloads in the last month in RStudio
- ------------- |  -------------
-1:   randomForest | 28671
-2:       party    | 13512
-3:  randomForestSRC | 2134
-4:        ranger    | 1405
-5:      Rborist     | 341
-6:          bigrf   |   13
+ package              |  Number of downloads in the last month in RStudio
+ -------------        |  -------------:
+1:   randomForest     | 28671
+2:       party        | 13512
+3:  randomForestSRC   | 2134
+4:        ranger      | 1405
+5:      Rborist       | 341
+6:          bigrf     |   13
 
 So what package to use? Of course it depends on the statistical problem.  
 In the classical classification or regression case you have many options. For big datasets the packages 
