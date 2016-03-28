@@ -16,6 +16,10 @@ In my last post I provided a small list of some R packages for random forest. To
 
 **xgboost** is a package that is used for boosted tree algorithms and is the current *state of the art* for machine learning challenges for example on the platform Kaggle due to its flexibility and very good performance. **xgboost** also contains the possibility to grow a random forest, as can be seen in the last section of this [tutorial page](https://cran.r-project.org/web/packages/xgboost/vignettes/discoverYourData.html).
 
+A graphical representation of this table:
+
+![graphic](/images/rfpack.png "graphic")
+
 Two algorithms that are especially constructed for big datasets are the following three (**ranger** and **Rborist** could also have been listed here):
 
  **package**              |  **RStudio downloads in the last month**
@@ -47,9 +51,32 @@ Many more packages exist which are slightly different from the original random f
 
 **rpart** is just for creating a single tree. **party** contain **cforest** which are random forests based on conditional inference trees. 
 
-
-Graphic
-
 R-code for obtaining the tables and the graphic:
+
+```
+library(cranlogs)
+library(data.table)
+library(xtable)
+
+downloads = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), when = c("last-month"))
+downloads = data.table(downloads)
+downloads = downloads[,sum(count), by = "package"]
+downloads
+barplot(downloads$V1, names.arg = downloads$package, col = "blue")
+# xtable(downloads[,sum(count), by = "package"], digits=0)
+
+downloads = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), when = c("last-month"))
+downloads = data.table(downloads)
+downloads[,sum(count), by = "package"]
+downloads
+# xtable(downloads[,sum(count), by = "package"], digits=0)
+
+downloads = cran_downloads(packages = c("rpart", "RRF", "randomForestSRCSyn", "obliqueRF", "rotationForest", 
+                                        "rFerns", "randomUniformForest", "wsrf", "roughrf", "trimTrees", "extraTrees", "party" ), when = c("last-month"))
+downloads = data.table(downloads)
+downloads = downloads[,sum(count), by = "package"]
+downloads[order(downloads$V1, decreasing = T),]
+# xtable(downloads[,sum(count), by = "package"], digits=0)
+```
 
 
