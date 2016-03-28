@@ -6,11 +6,13 @@ comments: True
 
 In my last post I provided a small list of some R packages for random forest. Today I will provide a more complete list of random forest R packages. In the first table I list the R packages which contains the possibility to perform the standard random forest like described in the original Breiman paper. 
 
-|**package**        | **RStudio downloads in the last month**|
-|:--------------|---------------------------------------:|
-|h2o            |                                    3397|
-|ParallelForest |                                     261|
-|bigrf          |                                       6|
+|**package**     | **RStudio downloads in the last month**|
+|:---------------|---------------------------------------:|
+|randomForest    |                                   28353|
+|xgboost         |                                    4537|
+|randomForestSRC |                                    2291|
+|ranger          |                                    1347|
+|Rborist         |                                     284|
 
 <!--excerpt-->
 
