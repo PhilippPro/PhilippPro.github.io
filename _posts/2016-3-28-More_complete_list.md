@@ -22,11 +22,11 @@ A graphical representation of this table:
 
 Two algorithms that are especially constructed for big datasets are the following three (**ranger** and **Rborist** could also have been listed here):
 
- **package**              |  **RStudio downloads in the last month**
- -------------        |  -------------:
-1:            h2o | 3397
-2: ParallelForest | 261
-3:          bigrf | 6
+|package        | **RStudio downloads in the last month**|
+|:--------------|---------------------------------------:|
+|h2o            |                                    3397|
+|ParallelForest |                                     261|
+|bigrf          |                                       6|
 
 **bigrf** is currently not on **CRAN** anymore [as check problems were not corrected despite reminders,](https://cran.r-project.org/web/packages/bigrf/index.html) that is the reason for the low download statistic. 
 
@@ -35,18 +35,19 @@ The github page of the whole study can be seen [here](https://github.com/szilard
 
 Many more packages exist which are slightly different from the original random forest algorithm. These are listed in the following table:
 
- **package**              |  **RStudio downloads in the last month**
- 1:               rpart | 21585
- 2:               party | 14338
- 3:          extraTrees | 1408
- 4:                 RRF | 516
- 5:      rotationForest | 437
- 6:              rFerns | 431
- 7:           obliqueRF | 252
- 8:                wsrf | 232
- 9: randomUniformForest | 189
-10:           trimTrees | 134
-11:             roughrf | 126
+|package             | **RStudio downloads in the last month**|
+|:-------------------|---------------------------------------:|
+|rpart               |                                   21585|
+|party               |                                   14338|
+|extraTrees          |                                    1408|
+|RRF                 |                                     516|
+|rotationForest      |                                     437|
+|rFerns              |                                     431|
+|obliqueRF           |                                     252|
+|wsrf                |                                     232|
+|randomUniformForest |                                     189|
+|trimTrees           |                                     134|
+|roughrf             |                                     126|
 12:  randomForestSRC(Syn) | 2291
 
 **rpart** is just for creating a single tree. **party** contains **cforest** which are random forests based on conditional inference trees. 
@@ -56,27 +57,27 @@ R-code for obtaining the tables and the graphic:
 ```
 library(cranlogs)
 library(data.table)
-library(xtable)
+library(knitr)
 
 downloads = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), when = c("last-month"))
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-downloads
-barplot(downloads$V1, names.arg = downloads$package, col = "blue")
-# xtable(downloads[,sum(count), by = "package"], digits=0)
+colnames(downloads)[2] = "**RStudio downloads in the last month**"
+kable(downloads, format = "markdown")
+barplot(downloads[,2], names.arg = downloads$package, col = "blue")
 
 downloads = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), when = c("last-month"))
 downloads = data.table(downloads)
-downloads[,sum(count), by = "package"]
-downloads
-# xtable(downloads[,sum(count), by = "package"], digits=0)
+downloads = downloads[,sum(count), by = "package"]
+colnames(downloads)[2] = "**RStudio downloads in the last month**"
+kable(downloads, format = "markdown")
 
 downloads = cran_downloads(packages = c("rpart", "RRF", "randomForestSRCSyn", "obliqueRF", "rotationForest", 
                                         "rFerns", "randomUniformForest", "wsrf", "roughrf", "trimTrees", "extraTrees", "party" ), when = c("last-month"))
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-downloads[order(downloads$V1, decreasing = T),]
-# xtable(downloads[,sum(count), by = "package"], digits=0)
+colnames(downloads)[2] = "**RStudio downloads in the last month**"
+kable(downloads, format = "markdown")
 ```
 
 
