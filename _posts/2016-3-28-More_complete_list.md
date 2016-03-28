@@ -6,7 +6,7 @@ comments: True
 
 In my last post I provided a small list of some R packages for random forest. Today I will provide a more complete list of random forest R packages. In the first table I list the R packages which contains the possibility to perform the standard random forest like described in the original Breiman paper. 
 
-|package        | **RStudio downloads in the last month**|
+|**package**        | **RStudio downloads in the last month**|
 |:--------------|---------------------------------------:|
 |h2o            |                                    3397|
 |ParallelForest |                                     261|
@@ -22,7 +22,7 @@ A graphical representation of this table:
 
 Two algorithms that are especially constructed for big datasets are the following three (**ranger** and **Rborist** could also have been listed here):
 
-|package        | **RStudio downloads in the last month**|
+|**package**        | **RStudio downloads in the last month**|
 |:--------------|---------------------------------------:|
 |h2o            |                                    3397|
 |ParallelForest |                                     261|
@@ -35,7 +35,7 @@ The github page of the whole study can be seen [here](https://github.com/szilard
 
 Many more packages exist which are slightly different from the original random forest algorithm. These are listed in the following table:
 
-|package             | **RStudio downloads in the last month**|
+|**package**             | **RStudio downloads in the last month**|
 |:-------------------|---------------------------------------:|
 |rpart               |                                   21585|
 |party               |                                   14338|
@@ -62,22 +62,21 @@ library(knitr)
 downloads = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), when = c("last-month"))
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-colnames(downloads)[2] = "**RStudio downloads in the last month**"
+colnames(downloads) = c("**package**", "**RStudio downloads in the last month**")
 kable(downloads, format = "markdown")
 barplot(downloads[,2], names.arg = downloads$package, col = "blue")
 
 downloads = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), when = c("last-month"))
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-colnames(downloads)[2] = "**RStudio downloads in the last month**"
+colnames(downloads) = c("**package**", "**RStudio downloads in the last month**")
 kable(downloads, format = "markdown")
 
 downloads = cran_downloads(packages = c("rpart", "RRF", "randomForestSRCSyn", "obliqueRF", "rotationForest", 
                                         "rFerns", "randomUniformForest", "wsrf", "roughrf", "trimTrees", "extraTrees", "party" ), when = c("last-month"))
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-colnames(downloads)[2] = "**RStudio downloads in the last month**"
+downloads = downloads[order(downloads$V1, decreasing = T),]
+colnames(downloads) = c("**package**", "**RStudio downloads in the last month**")
 kable(downloads, format = "markdown")
 ```
-
-
