@@ -4,7 +4,7 @@ title: A More Complete List of Random Forest R Packages
 comments: True
 ---
 
-In my last post I provided a small list of some R packages for random forest. Today I will provide a more complete list of random forest R packages. In the first table I list the R packages which contain the possibility to perform the standard random forest like described in the original Breiman paper. 
+In my last post I provided a small list of some R packages for random forest. Today I will provide a more complete list of random forest R packages. In the first table I list the R packages which contains the possibility to perform the standard random forest like described in the original Breiman paper. 
 
  **package**              |  **RStudio downloads in the last month**
  -------------        |  -------------:
@@ -51,7 +51,7 @@ Many more packages exist which are slightly different from the original random f
 11:             roughrf | 126
 12:  randomForestSRC(Syn) | 2291
 
-**rpart** is just for creating a single tree. **party** contain **cforest** which are random forests based on conditional inference trees. 
+**rpart** is just for creating a single tree. **party** contains **cforest** which are random forests based on conditional inference trees. 
 
 R-code for obtaining the tables and the graphic:
 
