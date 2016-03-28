@@ -14,6 +14,8 @@ In my last post I provided a small list of some R packages for random forest. To
 4:          ranger |  1347
 5:         Rborist |  284
 
+<!--excerpt-->
+
 **xgboost** is a package that is used for boosted tree algorithms and is the current *state of the art* for machine learning challenges for example on the platform Kaggle due to its flexibility and very good performance. **xgboost** also contains the possibility to grow a random forest, as can be seen in the last section of this [tutorial page](https://cran.r-project.org/web/packages/xgboost/vignettes/discoverYourData.html).
 
 A graphical representation of this table:
