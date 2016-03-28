@@ -30,7 +30,7 @@ Two algorithms that are especially constructed for big datasets are the followin
 
 **bigrf** is currently not on **CRAN** anymore [as check problems were not corrected despite reminders,](https://cran.r-project.org/web/packages/bigrf/index.html) that is the reason for the low download statistic. 
 
-An interesting blog post about benchmarking different packages (also on other software like Python and **only** one dataset) on big datasets and classification tasks can be found [here](http://datascience.la/benchmarking-random-forest-implementations/). It is mainly interesting for seeing the differences in speed performance. Benchmarking on only one dataset is clearly not enough. 
+An interesting blog post from Szilard about benchmarking different packages (also on other software like Python and **only** one dataset) on big datasets and classification tasks can be found [here](http://datascience.la/benchmarking-random-forest-implementations/). It is mainly interesting for seeing the differences in speed performance. Benchmarking performance on only one dataset is clearly not enough. 
 The github page of the whole study can be seen [here](https://github.com/szilard/benchm-ml)
 
 Many more packages exist which are slightly different from the original random forest algorithm. These are listed in the following table:
