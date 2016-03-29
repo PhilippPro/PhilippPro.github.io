@@ -61,6 +61,7 @@ densities and conditional probability distributions.
 
 ## More
 
-Many more packages exist with new algorithms based on random forests (**RRF**, **roughrf**, **icRSF** (for survival), **wsrf**, **iRafnet**, **randomUniformForest**, **fuzzyforest**), possibilities for variable selection (**varSelRF**, **VSURF**, **RFgroove**, **AUCRF**), visualisations (**ggRandomForests**, **forestFloor**) or imputation (**missForest**, **imputeMissings**) with random forests. For binary data, **LogicForest** is a forest of logic regression trees.
+Many more packages exist with new algorithms based on random forests (**RRF**, **roughrf**, **icRSF** (for survival), **wsrf**, **iRafnet**, **randomUniformForest**, **fuzzyforest**), possibilities for variable selection (**varSelRF**, **VSURF**, **RFgroove**, **AUCRF**), visualisations (**ggRandomForests**, **forestFloor**) or imputation (**missForest**, **imputeMissings**) with random forests. For binary data, **LogicForest** is a forest of logic regression trees. 
+**REEMtree** is useful for longitudinal studies where random effects exist. 
 
 These implementations can be found easily by a quick search on [Metacran](http://www.r-pkg.org/search.html?q=random%20forest&page=1).
