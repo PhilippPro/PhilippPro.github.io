@@ -50,7 +50,7 @@ Many more packages exist which are slightly different from the original random f
 |randomUniformForest |                                     189|
 |trimTrees           |                                     134|
 |roughrf             |                                     126|
-12:  randomForestSRC(Syn) | 2291
+|randomForestSRC(Syn) | 2291
 
 **rpart** is just for creating a single tree. **party** contains **cforest** which are random forests based on conditional inference trees. 
 
