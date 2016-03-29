@@ -63,4 +63,4 @@ densities and conditional probability distributions.
 
 Many more packages exist with new algorithms based on random forests (**RRF**, **roughrf**, **icRSF** (for survival), **wsrf**, **iRafnet**, **randomUniformForest**, **fuzzyforest**), possibilities for variable selection (**varSelRF**, **VSURF**, **RFgroove**, **AUCRF**), visualisations (**ggRandomForests**, **forestFloor**) or imputation (**missForest**, **imputeMissings**) with random forests. 
 
-This implementations can be found easily by a quick search on [Metacran](http://www.r-pkg.org/search.html?q=random%20forest&page=1).
+These implementations can be found easily by a quick search on [Metacran](http://www.r-pkg.org/search.html?q=random%20forest&page=1).
