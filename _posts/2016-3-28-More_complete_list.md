@@ -22,7 +22,7 @@ A graphical representation of this table:
 
 ![graphic](/images/rfpack.png "graphic")
 
-Two algorithms that are especially constructed for big datasets are the following three (**ranger** and **Rborist** could also have been listed here):
+Three algorithms that are especially constructed for big datasets are the following three (**ranger** and **Rborist** could also have been listed here):
 
 |**package**        | **RStudio downloads in the last month**|
 |:--------------|---------------------------------------:|
