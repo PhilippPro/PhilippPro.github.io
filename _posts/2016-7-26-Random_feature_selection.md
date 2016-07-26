@@ -12,4 +12,4 @@ least some relevant features come into the comparison. It also depends highly on
 few features with relevance, the number k should be set sufficiently high, and vice versa.
 
 The introduction of randomness in the feature selection process seems to be advantageous in many cases. The default in 
-many packages like **randomForest** is to choose $k = \sqrt(p)$ features at random at each split. 
+many packages like **randomForest** is to choose $latex k = \sqrt(p)$ features at random at each split. 
