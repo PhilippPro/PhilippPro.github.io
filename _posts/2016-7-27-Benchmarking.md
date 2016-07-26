@@ -12,9 +12,9 @@ I am performing a benchmark study with datasets from OpenML and classification a
 which provide standardized interface to many of the algorithms implemented in R and easy evaluation with resampling 
 strategies like cross-validation.
 
-The comparison can be found on this github repository. [https://github.com/PhilippPro/benchmark-mlr-openml].
+The comparison can be found on this github repository: (benchmark-mlr-openml)[https://github.com/PhilippPro/benchmark-mlr-openml].
 
 I will soon post a summary about the results. 
 
 Another comparison just between random forest and logistic regression is done by Raphael:
-(https://github.com/PhilippPro/benchmark-mlr-openml).
+(benchmark-mlr-openml)[https://github.com/PhilippPro/benchmark-mlr-openml].
