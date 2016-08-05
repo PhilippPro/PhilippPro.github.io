@@ -69,6 +69,8 @@ There were a few datasets where some of the learners provided errors.
 In the first approach these were treated as having the worst performance and so all learners providing errors got the worst rank. 
 If there were several learners they got all the *averaged* worst rank. 
 
+## Classification
+
 The results in the classification case, regarding the accuracy are summarized in the following barplot graphic:
 
 ![graphic](/images/1_best_algo_classif_with_na_rank.png "graphic")
@@ -83,6 +85,8 @@ In the case of the brier score, **svm** got the second place and in the logarith
 Regarding training time, **kknn**, **randomForestSRCSyn**, **naiveBayes** and **lda** got the best results. 
 
 Instead of taking all datasets one could exclude datasets, where some of the learners got errors. The [results](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf) are quite similar.
+
+## Regression
 
 More interestingly are probably the results of the regression tasks, as there is no available comprehensive regression benchmark study to the best of my knowledge. 
 
