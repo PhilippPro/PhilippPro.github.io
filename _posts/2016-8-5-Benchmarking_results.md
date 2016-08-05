@@ -7,7 +7,7 @@ comments: True
 There are already some benchmarking studies about different classification algorithms out there. The probably most well known and 
 most extensive one is the 
 [Do we Need Hundreds of Classifers to Solve Real World Classication Problems?](http://www.jmlr.org/papers/volume15/delgado14a/source/delgado14a.pdf)
-Paper. They use different software and also different tuning processes to compare 121 learners on more than 121 datasets, mainly 
+paper. They use different software and also different tuning processes to compare 121 learners on more than 121 datasets, mainly 
 from the [UCI](https://archive.ics.uci.edu/ml/datasets.html) site. They exclude different datasets, because their dimension 
 (number of observations or number of features) are too high, they are not in a proper format or because of other reasons. 
 There are also summarized some criticism about the representability of the datasets and the generability of benchmarking results. 
@@ -22,9 +22,8 @@ on these days.
 
 In my first approach for benchmarking different learners I will follow a more standardized approach, that can be easily 
 redone in future when new learners or datasets are added to the analysis. 
-I use the R package **OpenML** for getting access to OpenML datasets and the R package **mlr** (similar to caret, but more extensive)
-to have a standardized interface to machine learning algorithms. Furthermore the experiments are done with the help of the 
-R package [**batchtools**](https://github.com/mllg/batchtools), 
+I use the R package **OpenML** for getting access to OpenML datasets and the R package **mlr** (similar to caret, but more extensive) to have a standardized interface to machine learning algorithms in R. 
+Furthermore the experiments are done with the help of the package [**batchtools**](https://github.com/mllg/batchtools), 
 in order to parallelize the experiments (Installation via **devtools** package: devtools::install_github("mlr-org/mlr")).
 
 <!--excerpt-->
@@ -66,6 +65,21 @@ For comparison, the learners were ranked on each dataset. (see [benchmark_analys
 There were a few datasets where some of the learners provided errors. 
 In the first approach these were treated as having the worst performance and so all learners providing errors got the worst rank. 
 If there were several learners they got all the *averaged* worst rank. 
-The results are summarized in the following graphic:
+
+The results in the classification case, regarding the accuracy are summarized in the following graphic:
 
 ![graphic](/images/1_best_algo_classif_with_na_rank.png "graphic")
+
+Clearly the random forest implementations outperform the other. None of the three available packages is clearly better than the other. **svm**, **glmnet** and **cforest** follow. One could probably get better results for **svm** and **xgboost** and some other learners with proper tuning. 
+
+The results for the other measures were quite similar and can be seen [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf). 
+In the case of the brier score, svm got the second place and in the logarithmic loss case even the first place. SVM seems to be
+better suited for these probability measures. 
+
+Regarding training time, kknn, randomForestSRCSyn, naiveBayes and lda got the best results. 
+
+Instead of taking all datasets one could exclude datasets, where some of the learners got errors. The [results](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf) are quite similar.
+
+More interestingly are probably the results of the regression tasks, as there is no available comprehensive regression benchmark study to the best of my knowledge. 
+
+
