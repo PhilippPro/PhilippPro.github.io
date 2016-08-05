@@ -27,6 +27,8 @@ to have a standardized interface to machine learning algorithms. Furthermore the
 R package [**batchtools**](https://github.com/mllg/batchtools), 
 in order to parallelize the experiments (Installation via **devtools** package: devtools::install_github("mlr-org/mlr")).
 
+<!--excerpt-->
+
 The first step was to choose some datasets of the OpenML dataplatform. This was done in the [datasets.R](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/datasets.R)
 file. I want to evaluate classification learners as well as regression learners, so I downloaded datasets for both tasks. 
 The download date was 28.01.2016 so probably nowadays there are more available. I applied several exclusion criteria:
