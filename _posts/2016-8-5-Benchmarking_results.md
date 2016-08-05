@@ -87,7 +87,7 @@ Instead of taking all datasets one could exclude datasets, where some of the lea
 
 More interestingly are probably the results of the regression tasks, as there is no available comprehensive regression benchmark study to the best of my knowledge. 
 
-If a algorithm provided an error it was ranked with the worst rank like in the classification case. 
+If an algorithm provided an error it was ranked with the worst rank like in the classification case. 
 
 The results for the mean squared error can be seen here:
 
