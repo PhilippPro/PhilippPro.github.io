@@ -39,9 +39,12 @@ The download date was 28.01.2016 so probably nowadays there are more available. 
 bigger datasets are added later)
 5. In the classification case: only datasets where the target is a factor
 
-Of course this exclusion criteria change the representativeness of the datasets. 
+Of course this exclusion criteria change the representativeness of the datasets.  
 
-The benchmark file can be found [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/benchmark.R).
+These exclusion criteria provide 184 classification datasets and 98 regression datasets. 
+
+The benchmark file on these datasets can be found
+[here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/benchmark.R).
 For the classification datasets all available classification learners in mlr, that 
 can handle multiclass problems, provide probability estimations and can handle factor features, are used. "boosting" of the 
 **adabag** package is excluded, because it took too long on our test dataset. 
@@ -66,9 +69,11 @@ There were a few datasets where some of the learners provided errors.
 In the first approach these were treated as having the worst performance and so all learners providing errors got the worst rank. 
 If there were several learners they got all the *averaged* worst rank. 
 
-The results in the classification case, regarding the accuracy are summarized in the following graphic:
+The results in the classification case, regarding the accuracy are summarized in the following barplot graphic:
 
 ![graphic](/images/1_best_algo_classif_with_na_rank.png "graphic")
+
+It depicts the average rank regarding accuracy over all classification dataset of each learner. 
 
 Clearly the random forest implementations outperform the other. None of the three available packages is clearly better than the other. **svm**, **glmnet** and **cforest** follow. One could probably get better results for **svm** and **xgboost** and some other learners with proper tuning. 
 
@@ -82,4 +87,24 @@ Instead of taking all datasets one could exclude datasets, where some of the lea
 
 More interestingly are probably the results of the regression tasks, as there is no available comprehensive regression benchmark study to the best of my knowledge. 
 
+If a algorithm provided an error it was ranked with the worst rank like in the classification case. 
 
+The results for the mean squared error can be seen here:
+
+![graphic](/images/1_best_algo_regr_with_na_rank.png "graphic")
+
+It depicts the average rank regarding mean square error over all regression dataset of each learner. 
+
+Surprisingly the bartMachine algorithm performs best! The standard random forest implementations are also all under the top 4.
+cubist, glmnet and kknn also perform very good. The standard linear model (lm) is "unter ferner liefen". 
+
+[bartMachine](https://arxiv.org/pdf/1312.2171.pdf) and [cubist](https://cran.r-project.org/web/packages/Cubist/vignettes/cubist.pdf) are also tree based methods combined with an ensembling method. 
+
+Once again, if tuning is performed, the ranking would change for algorithms like **svm** and **xgboost**.
+
+Results for the other measures can be seen [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_regr_with_na_rank.pdf).
+The average rank of cubist gets much better when regarding the mean of absolute error and even gots best, when regarding the median of squared error and median of absolute error. It seems to be a very robust method. 
+
+kknn also gets better for the median of squared and absolute error. Regarding the training time it is once again the unbeaten number one. randomForestSRCSyn is also much faster than the other randomForest implementations. lm is also under the best regarding training time. 
+
+When omitting datasets where some of the learners produced errors, only 26 regression datasets remain. bartMachine remains best for the mean squared error. The results for the other learners change slightly. See [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_regr_rank.pdf).
