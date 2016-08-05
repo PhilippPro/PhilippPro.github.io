@@ -7,7 +7,7 @@ comments: True
 There are already some benchmarking studies about different classification algorithms out there. The probably most well known and 
 most extensive one is the 
 [Do we Need Hundreds of Classifers to Solve Real World Classication Problems?](http://www.jmlr.org/papers/volume15/delgado14a/source/delgado14a.pdf)
-paper. They use different software and also different tuning processes to compare 121 learners on more than 121 datasets, mainly 
+paper. They use different software and also different tuning processes to compare 179 learners on more than 121 datasets, mainly 
 from the [UCI](https://archive.ics.uci.edu/ml/datasets.html) site. They exclude different datasets, because their dimension 
 (number of observations or number of features) are too high, they are not in a proper format or because of other reasons. 
 There are also summarized some criticism about the representability of the datasets and the generability of benchmarking results. 
@@ -20,7 +20,7 @@ Other benchmarking studies use much less datasets and are much less extensive (e
 [Caruana Paper](https://www.cs.cornell.edu/~caruana/ctp/ct.papers/caruana.icml06.pdf)). Computational power was also not the same 
 on these days. 
 
-In my first approach for benchmarking different learners I will follow a more standardized approach, that can be easily 
+In my first approach for benchmarking different learners I follow a more standardized approach, that can be easily 
 redone in future when new learners or datasets are added to the analysis. 
 I use the R package **OpenML** for getting access to OpenML datasets and the R package **mlr** (similar to caret, but more extensive) to have a standardized interface to machine learning algorithms in R. 
 Furthermore the experiments are done with the help of the package [**batchtools**](https://github.com/mllg/batchtools), 
@@ -28,9 +28,9 @@ in order to parallelize the experiments (Installation via **devtools** package: 
 
 <!--excerpt-->
 
-The first step was to choose some datasets of the OpenML dataplatform. This was done in the [datasets.R](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/datasets.R)
-file. I want to evaluate classification learners as well as regression learners, so I downloaded datasets for both tasks. 
-The download date was 28.01.2016 so probably nowadays there are more available. I applied several exclusion criteria:
+The first step is to choose some datasets of the OpenML dataplatform. This is done in the [datasets.R](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/datasets.R)
+file. I want to evaluate classification learners as well as regression learners, so I choose datasets for both tasks. 
+The choosing date was 28.01.2016 so probably nowadays there are more available. I applied several exclusion criteria:
 
 1. No datasets with missing values (this can be omitted in future with some imputation technique)
 2. Each dataset only once (although there exist several tasks for some)
@@ -52,22 +52,22 @@ can handle multiclass problems, provide probability estimations and can handle f
 For the regression datasets only regression learners that can handle factor features are included. 
 The learners "btgp", "btgpllm" and "btlm" are excluded, because their training time was too long. 
 
-In this preliminary study all learners were used with their default hyperparameter settings without tuning. 
-The evaluation technique was 10-fold crossvalidation, 10 times repeated and it was executed by the resample function 
-in mlr. The folds were the same for all the learners. The evaluation measures were the accuracy, the balanced error rate,
+In this preliminary study all learners are used with their default hyperparameter settings without tuning. 
+The evaluation technique is 10-fold crossvalidation, 10 times repeated and it is executed by the resample function 
+in mlr. The folds are the same for all the learners. The evaluation measures are the accuracy, the balanced error rate,
 the (multiclass) auc, the (multiclass) brier score and the logarithmic loss for the classification and
 the mean square error, mean of absolute error, median of square error and median of absolute error. Additionally the 
-training time was recorded. 
+training time is recorded. 
 
 On 12 cores it took me around 4 days for all datasets. 
 
-I evaluated the results with help of the **data.table** package, which is good for handling big datasets and fast calculation 
+I evaluate the results with help of the **data.table** package, which is good for handling big datasets and fast calculation 
 of subset statistics. Graphics were produced with help of the **ggplot** package. 
 
-For comparison, the learners were ranked on each dataset. (see [benchmark_analysis.R](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/benchmark_analysis.R))
-There were a few datasets where some of the learners provided errors. 
-In the first approach these were treated as having the worst performance and so all learners providing errors got the worst rank. 
-If there were several learners they got all the *averaged* worst rank. 
+For comparison, the learners are ranked on each dataset. (see [benchmark_analysis.R](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/code/benchmark_analysis.R))
+There are a few datasets where some of the learners provide errors. 
+In the first approach these were treated as having the worst performance and so all learners providing errors get the worst rank. 
+If there were several learners they get all the *averaged* worst rank. 
 
 ## Classification
 
@@ -79,10 +79,10 @@ It depicts the average rank regarding accuracy over all classification dataset o
 
 Clearly the random forest implementations outperform the other. None of the three available packages is clearly better than the other. **svm**, **glmnet** and **cforest** follow. One could probably get better results for **svm** and **xgboost** and some other learners with proper tuning. 
 
-The results for the other measures were quite similar and can be seen [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf). 
-In the case of the brier score, **svm** got the second place and in the logarithmic loss case even the first place. SVM seems to be better suited for these probability measures. 
+The results for the other measures are quite similar and can be seen [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf). 
+In the case of the brier score, **svm** gets the second place and in the logarithmic loss case even the first place. SVM seems to be better suited for these probability measures. 
 
-Regarding training time, **kknn**, **randomForestSRCSyn**, **naiveBayes** and **lda** got the best results. 
+Regarding training time, **kknn**, **randomForestSRCSyn**, **naiveBayes** and **lda** gets the best results. 
 
 Instead of taking all datasets one could exclude datasets, where some of the learners got errors. The [results](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf) are quite similar.
 
