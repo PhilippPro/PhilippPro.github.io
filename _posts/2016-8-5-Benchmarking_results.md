@@ -24,7 +24,7 @@ In my first approach for benchmarking different learners I follow a more standar
 redone in future when new learners or datasets are added to the analysis. 
 I use the R package **OpenML** for getting access to OpenML datasets and the R package **mlr** (similar to caret, but more extensive) to have a standardized interface to machine learning algorithms in R. 
 Furthermore the experiments are done with the help of the package [**batchtools**](https://github.com/mllg/batchtools), 
-in order to parallelize the experiments (Installation via **devtools** package: devtools::install_github("mlr-org/mlr")).
+in order to parallelize the experiments (Installation via **devtools** package: devtools::install_github("mllg/batchtools")).
 
 <!--excerpt-->
 
