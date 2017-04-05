@@ -54,9 +54,8 @@ The learners "btgp", "btgpllm" and "btlm" are excluded, because their training t
 
 In this preliminary study all learners are used with their default hyperparameter settings without tuning. 
 The evaluation technique is 10-fold crossvalidation, 10 times repeated and it is executed by the resample function 
-in mlr. The folds are the same for all the learners. The evaluation measures are the accuracy, the balanced error rate,
-the (multiclass) auc, the (multiclass) brier score and the logarithmic loss for the classification and
-the mean square error, mean of absolute error, median of square error and median of absolute error. Additionally the 
+in mlr. The folds are the same for all the learners. The evaluation measures for classification are the accuracy, the balanced error rate,
+the (multiclass) auc, the (multiclass) brier score and the logarithmic loss and for regression the mean squared error, mean of absolute error, median of squared error and median of absolute error. Additionally the 
 training time is recorded. 
 
 On 12 cores it took me around 4 days for all datasets. 
@@ -82,7 +81,7 @@ Clearly the random forest implementations outperform the other. None of the thre
 The results for the other measures are quite similar and can be seen [here](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf). 
 In the case of the brier score, **svm** gets the second place and in the logarithmic loss case even the first place. SVM seems to be better suited for these probability measures. 
 
-Regarding training time, **kknn**, **randomForestSRCSyn**, **naiveBayes** and **lda** gets the best results. 
+Regarding training time, **kknn**, **randomForestSRCSyn**, **naiveBayes** and **lda** get the best results. 
 
 Instead of taking all datasets one could exclude datasets, where some of the learners got errors. The [results](https://github.com/PhilippPro/benchmark-mlr-openml/blob/master/results/best_algo_classif_rank.pdf) are quite similar.
 
