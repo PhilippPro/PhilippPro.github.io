@@ -12,7 +12,7 @@ the article.
 
 The download statistics of the random forest in march 2016 and in march 2017: 
 
-|**package**      |  **_march 2016_**|  **_march 2017_**|  **_ratio of 2017/2016_**|
+|**package**      |  **-march 2016-**|  **-march 2017-**|  **-ratio of 2017/2016-**|
 |:----------------|-----------------:|-----------------:|-------------------------:|
 |randomForest     |             29360|             55415|                  1.887432|
 |xgboost          |              4929|             12629|                  2.562183|
@@ -31,7 +31,7 @@ parallel on a simple machine. **xgboost** and **randomForestSRC** got a bigger i
 
 The results of the random forest packages for big datasets:
 
-|**package**     |  **_march 2016_**|  **_march 2017_**|  **_ratio of 2017/2016_**|
+|**package**     |  **-march 2016-**|  **-march 2017-**|  **-ratio of 2017/2016-**|
 |:---------------|-----------------:|-----------------:|-------------------------:|
 |h2o             |              3719|              9666|                 2.5990858|
 |ParallelForest  |               281|               279|                 0.9928826|
@@ -44,7 +44,8 @@ to most of the R users.
 
 Lastly the results for the other R packages that do not contain the standard random forest package but 
 a similar version:
-|**package**          |  **_march 2016_**|  **_march 2017_**|  **_ratio of 2017/2016_**|
+
+|**package**          |  **-march 2016-**|  **-march 2017-**|  **-ratio of 2017/2016-**|
 |:--------------------|-----------------:|-----------------:|-------------------------:|
 |rpart                |             22769|             30552|                 1.3418244|
 |party                |             15423|             32888|                 2.1323997|
@@ -57,7 +58,6 @@ a similar version:
 |randomUniformForest  |               198|               179|                 0.9040404|
 |trimTrees            |               148|                96|                 0.6486486|
 |roughrf              |               137|                94|                 0.6861314|
-
 
 **party** and **RRF** could gain the maximum increase in downloads. The simple tree package **rpart** 
 remains with high download statistics but cannot gain a much bigger increase. **extraTrees** dropped a bit 
@@ -82,7 +82,7 @@ downloads_new = cran_downloads(packages = c("randomForest", "xgboost", "randomFo
 downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
 downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
-colnames(downloads) = c("**package**", "**_march 2016_**", "**_march 2017_**", "**_ratio of 2017/2016_**")
+colnames(downloads) = c("**package**", "**-march 2016-**", "**-march 2017-**", "**-ratio of 2017/2016-**")
 
 kable(downloads, format = "markdown", padding = 2)
 barplot(unlist(downloads[,2]), names.arg = unlist(downloads[,1]), col = "blue")
@@ -94,7 +94,7 @@ downloads_new = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), fr
 downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
 downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
-colnames(downloads) = c("**package**", "**_march 2016_**", "**_march 2017_**", "**_ratio of 2017/2016_**")
+colnames(downloads) = c("**package**", "**-march 2016-**", "**-march 2017-**", "**-ratio of 2017/2016-**")
 
 kable(downloads, format = "markdown", padding = 2)
 
@@ -110,7 +110,7 @@ downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
 downloads_new = downloads_new[ordering,]
 downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
-colnames(downloads) = c("**package**", "**_march 2016_**", "**_march 2017_**", "**_ratio of 2017/2016_**")
+colnames(downloads) = c("**package**", "**-march 2016-**", "**-march 2017-**", "**-ratio of 2017/2016-**")
 
 kable(downloads, format = "markdown", padding = 2)
 ```
