@@ -79,24 +79,25 @@ library(knitr)
 downloads = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), from = "2016-03-01", to = "2016-03-31" )
 downloads = data.table(downloads)
 downloads = downloads[, sum(count), by = "package"]
-downloads_old = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), from = "2017-03-01", to = "2017-03-31" )
-downloads_old = data.table(downloads_old)
-downloads_old = downloads_old[, sum(count), by = "package"]
-downloads = cbind(downloads, downloads_old$V1)
-colnames(downloads) = c("**package**", "**march last year**", "**march this year**")
+downloads_new = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), from = "2017-03-01", to = "2017-03-31" )
+downloads_new = data.table(downloads_new)
+downloads_new = downloads_new[, sum(count), by = "package"]
+downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+colnames(downloads) = c("**package**", "**march 2016**", "**-march 2017**", "**-ratio of 2016/2017**")
 
-kable(downloads, format = "markdown")
+kable(downloads, format = "markdown", padding = 2)
 barplot(unlist(downloads[,2]), names.arg = unlist(downloads[,1]), col = "blue")
 
 downloads = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), from = "2016-03-01", to = "2016-03-31" )
 downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
-downloads_old = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), from = "2017-03-01", to = "2017-03-31" )
-downloads_old = data.table(downloads_old)
-downloads_old = downloads_old[, sum(count), by = "package"]
-downloads = cbind(downloads, downloads_old$V1)
-colnames(downloads) = c("**package**", "**march last year**", "**march this year**")
-kable(downloads, format = "markdown")
+downloads_new = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), from = "2017-03-01", to = "2017-03-31" )
+downloads_new = data.table(downloads_new)
+downloads_new = downloads_new[, sum(count), by = "package"]
+downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+colnames(downloads) = c("**package**", "**march 2016**", "**-march 2017**", "**-ratio of 2016/2017**")
+
+kable(downloads, format = "markdown", padding = 2)
 
 downloads = cran_downloads(packages = c("rpart", "RRF", "obliqueRF", "rotationForest", 
   "rFerns", "randomUniformForest", "wsrf", "roughrf", "trimTrees", "extraTrees", "party" ), from = "2016-03-01", to = "2016-03-31" )
@@ -104,12 +105,13 @@ downloads = data.table(downloads)
 downloads = downloads[,sum(count), by = "package"]
 ordering = order(downloads$V1, decreasing = T)
 downloads = downloads[ordering,]
-downloads_old = cran_downloads(packages = c("rpart", "RRF", "obliqueRF", "rotationForest", 
+downloads_new = cran_downloads(packages = c("rpart", "RRF", "obliqueRF", "rotationForest", 
   "rFerns", "randomUniformForest", "wsrf", "roughrf", "trimTrees", "extraTrees", "party" ), from = "2017-03-01", to = "2017-03-31" )
-downloads_old = data.table(downloads_old)
-downloads_old = downloads_old[, sum(count), by = "package"]
-downloads_old = downloads_old[ordering,]
-downloads = cbind(downloads, downloads_old$V1)
-colnames(downloads) = c("**package**", "**march last year**", "**march this year**")
-kable(downloads, format = "markdown")
+downloads_new = data.table(downloads_new)
+downloads_new = downloads_new[, sum(count), by = "package"]
+downloads_new = downloads_new[ordering,]
+downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+colnames(downloads) = c("**package**", "**march 2016**", "**-march 2017**", "**-ratio of 2016/2017**")
+
+kable(downloads, format = "markdown", padding = 2)
 ```
