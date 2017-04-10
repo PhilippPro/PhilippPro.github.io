@@ -6,11 +6,11 @@ comments: True
 
 I just updated the code from a [previous post](http://philipppro.github.io/More_complete_list/) where I 
 analysed the download statistics of different random forest packages in R, see the code at the bottom of 
-the article.
+the article. I calculated the number of cran downloads in march 2016 and march 2017. 
 
 ## Standard random forest
 
-The download statistics of the random forest in march 2016 and in march 2017: 
+The number of download of different packages containing the random forest algorithm in march 2016 and in march 2017: 
 
 |**package**      |  **--march 2016**|  **--march 2017**|  **--ratio of 2017/2016**|
 |:----------------|-----------------:|-----------------:|-------------------------:|
@@ -21,9 +21,9 @@ The download statistics of the random forest in march 2016 and in march 2017:
 |Rborist          |               298|               441|                      1.48|
 
 What is clearly visible is the general increase in downloads of all packages that contain the standard random 
-forest. The biggest gain in popularity could achieve the **ranger** package that allows to run the random forest in 
-parallel on a simple machine. **xgboost** and **randomForestSRC** got a bigger increase than the standard 
-**randomForest** package.
+forest. The biggest gain in popularity could achieve the **ranger** package that allows to run the random 
+forest in parallel on a simple machine. **xgboost** and **randomForestSRC** got a bigger increase than 
+the standard **randomForest** package.
 
 <!--excerpt-->
 
@@ -38,7 +38,7 @@ The results of the random forest packages for big datasets:
 |bigrf           |                10|                 3|                      0.30|
 
 **h2o** could achieve the biggest increase in cran downloads. The other two packages remain rather unknown 
-to most of the R users.
+to most R users.
 
 ## Packages with algorithms similar to random forest
 
@@ -59,9 +59,9 @@ a similar version:
 |trimTrees            |               148|                96|                      0.65|
 |roughrf              |               137|                94|                      0.69|
 
-**party** and **RRF** could gain the maximum increase in downloads. The simple tree package **rpart** 
-remains with high download statistics but cannot gain a much bigger increase. **extraTrees** dropped a bit 
-in the download statistic and does not gain so much attendance as last year. 
+**party** and **RRF** could gain the maximum increase in downloads. The package **rpart** for simply 
+constructing one tree remains with high download statistics but cannot gain a much bigger increase.
+**extraTrees** dropped a bit in the download statistic and does not gain so much attendance as last year. 
 
 ## Conclusion
 
