@@ -37,7 +37,7 @@ The results of the random forest packages for big datasets:
 |ParallelForest  |               281|               279|                      0.99|
 |bigrf           |                10|                 3|                      0.30|
 
-**h2o** could achieve the biggest gain in cran downloads. The other two packages remain rather unknown 
+**h2o** could achieve the biggest increase in cran downloads. The other two packages remain rather unknown 
 to most of the R users.
 
 ## Packages with algorithms similar to random forest
@@ -65,7 +65,7 @@ in the download statistic and does not gain so much attendance as last year.
 
 ## Conclusion
 
-**ranger**, **xgboost** and **party** are the biggest winner in the last year. 
+**ranger**, **xgboost** and **party** are the biggest winners in the last year. 
 Generally the downloads have approximately doubled - which indicates that random forest is getting 
 more and more popularity in the R community. 
 
