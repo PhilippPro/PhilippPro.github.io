@@ -25,6 +25,8 @@ forest. The biggest gain in popularity could achieve the **ranger** package that
 parallel on a simple machine. **xgboost** and **randomForestSRC** got a bigger increase than the standard 
 **randomForest** package.
 
+<!--excerpt-->
+
 ## Random forest for big datasets
 
 The results of the random forest packages for big datasets:
