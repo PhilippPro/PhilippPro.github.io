@@ -14,11 +14,11 @@ The download statistics of the random forest in march 2016 and in march 2017:
 
 |**package**      |  **--march 2016**|  **--march 2017**|  **--ratio of 2017/2016**|
 |:----------------|-----------------:|-----------------:|-------------------------:|
-|randomForest     |             29360|             55415|                  1.887432|
-|xgboost          |              4929|             12629|                  2.562183|
-|randomForestSRC  |              2559|              6106|                  2.386088|
-|ranger           |              1482|              5622|                  3.793522|
-|Rborist          |               298|               441|                  1.479866|
+|randomForest     |             29360|             55415|                      1.89|
+|xgboost          |              4929|             12629|                      2.56|
+|randomForestSRC  |              2559|              6106|                      2.39|
+|ranger           |              1482|              5622|                      3.79|
+|Rborist          |               298|               441|                      1.48|
 
 What is clearly visible is the general increase in downloads of all packages that contain the standard random 
 forest. The biggest gain in popularity could achieve the **ranger** package that allows to run the random forest in 
@@ -33,9 +33,9 @@ The results of the random forest packages for big datasets:
 
 |**package**     |  **--march 2016**|  **--march 2017**|  **--ratio of 2017/2016**|
 |:---------------|-----------------:|-----------------:|-------------------------:|
-|h2o             |              3719|              9666|                 2.5990858|
-|ParallelForest  |               281|               279|                 0.9928826|
-|bigrf           |                10|                 3|                 0.3000000|
+|h2o             |              3719|              9666|                      2.60|
+|ParallelForest  |               281|               279|                      0.99|
+|bigrf           |                10|                 3|                      0.30|
 
 **h2o** could achieve the biggest gain in cran downloads. The other two packages remain rather unknown 
 to most of the R users.
@@ -47,17 +47,17 @@ a similar version:
 
 |**package**          |  **--march 2016**|  **--march 2017**|  **--ratio of 2017/2016**|
 |:--------------------|-----------------:|-----------------:|-------------------------:|
-|rpart                |             22769|             30552|                 1.3418244|
-|party                |             15423|             32888|                 2.1323997|
-|extraTrees           |              1446|              1112|                 0.7690180|
-|RRF                  |               525|              1153|                 2.1961905|
-|rFerns               |               450|               488|                 1.0844444|
-|rotationForest       |               407|               342|                 0.8402948|
-|obliqueRF            |               267|               255|                 0.9550562|
-|wsrf                 |               248|               435|                 1.7540323|
-|randomUniformForest  |               198|               179|                 0.9040404|
-|trimTrees            |               148|                96|                 0.6486486|
-|roughrf              |               137|                94|                 0.6861314|
+|rpart                |             22769|             30552|                      1.34|
+|party                |             15423|             32888|                      2.13|
+|extraTrees           |              1446|              1112|                      0.77|
+|RRF                  |               525|              1153|                      2.20|
+|rFerns               |               450|               488|                      1.08|
+|rotationForest       |               407|               342|                      0.84|
+|obliqueRF            |               267|               255|                      0.96|
+|wsrf                 |               248|               435|                      1.75|
+|randomUniformForest  |               198|               179|                      0.90|
+|trimTrees            |               148|                96|                      0.65|
+|roughrf              |               137|                94|                      0.69|
 
 **party** and **RRF** could gain the maximum increase in downloads. The simple tree package **rpart** 
 remains with high download statistics but cannot gain a much bigger increase. **extraTrees** dropped a bit 
@@ -81,7 +81,7 @@ downloads = downloads[, sum(count), by = "package"]
 downloads_new = cran_downloads(packages = c("randomForest", "xgboost", "randomForestSRC", "ranger", "Rborist"), from = "2017-03-01", to = "2017-03-31" )
 downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
-downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+downloads = cbind(downloads, downloads_new$V1, round(downloads_new$V1/downloads$V1, 2))
 colnames(downloads) = c("**package**", "**--march 2016**", "**--march 2017**", "**--ratio of 2017/2016**")
 
 kable(downloads, format = "markdown", padding = 2)
@@ -93,7 +93,7 @@ downloads = downloads[,sum(count), by = "package"]
 downloads_new = cran_downloads(packages = c("h2o","ParallelForest", "bigrf"), from = "2017-03-01", to = "2017-03-31" )
 downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
-downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+downloads = cbind(downloads, downloads_new$V1, round(downloads_new$V1/downloads$V1, 2))
 colnames(downloads) = c("**package**", "**--march 2016**", "**--march 2017**", "**--ratio of 2017/2016**")
 
 kable(downloads, format = "markdown", padding = 2)
@@ -109,7 +109,7 @@ downloads_new = cran_downloads(packages = c("rpart", "RRF", "obliqueRF", "rotati
 downloads_new = data.table(downloads_new)
 downloads_new = downloads_new[, sum(count), by = "package"]
 downloads_new = downloads_new[ordering,]
-downloads = cbind(downloads, downloads_new$V1, downloads_new$V1/downloads$V1)
+downloads = cbind(downloads, downloads_new$V1, round(downloads_new$V1/downloads$V1, 2))
 colnames(downloads) = c("**package**", "**--march 2016**", "**--march 2017**", "**--ratio of 2017/2016**")
 
 kable(downloads, format = "markdown", padding = 2)
