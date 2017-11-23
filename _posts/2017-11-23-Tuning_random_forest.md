@@ -79,7 +79,7 @@ standard random forest without tuning. The competitors are the following:
 Our benchmark study is conducted on several datasets from [OpenML](https://github.com/openml/OpenML). 
 We use the [OpenML100](https://arxiv.org/abs/1708.03731) benchmarking suite and download it via the OpenML R package. 
 For classification we only use datasets that have a binary target and no missing values. We classify the datasets into small, 
-medium and big by executing a simple random forest with 1000 trees on 10 cores and recording the runtime. If the runtime is less 
+medium and big by executing **tuneRF** on 10 cores and recording the runtime. If the runtime is less 
 than 60 seconds, the dataset is classified as small, if it is between one minute and ten minutes as medium and datasets with a 
 runtime bigger than 10 minutes are classified as big. 
 
