@@ -27,12 +27,6 @@ Here is a brief R-Code that shows how it works. We need also the [mlr](https://g
 First a mlr task has to be created via `makeClassifTask` or `makeRegrTask`. After that the runtime of the tuning can be estimated 
 with `estimateTuneRFTime`. 
 
-<style>
-div.blue pre { background-color:lightblue; }
-div.blue pre.r { background-color:blue; }
-</style>
-
-<div class = "blue">
 ```{r}
 library(tuneRF)
 library(mlr)
@@ -58,7 +52,6 @@ results[results$multiclass.brier < quantile(results$multiclass.brier, 0.05),]
 # Restart after failing in one of the iterations:
 res = restartTuneRF("./optpath.RData", iris.task, measure = list(multiclass.brier))
 ```
-</div>
 
 The execution of the tuning can be done with the `tuneRF` function. The `task` has to be passed as well as 
 a `measure` that should be tuned. Which measures are available can be looked up on the
@@ -107,7 +100,7 @@ runtime bigger than 10 minutes are classified as big.
 For the small and medium datasets we perform a 5-fold cross-validation and repeat it 10 times. The average results for these 
 30 datasets can be seen in the table below. The ending of **tuneRF** specifies which measure was tuned. 
 
-|              | Error rate| (Multiclass) AUC| Brier Score| Logarithmic Loss| Training Runtime|
+|              |-Error rate|-(Multiclass) AUC|-Brier Score|-Logarithmic Loss|-Training Runtime|
 |:-------------|----------:|----------------:|-----------:|----------------:|----------------:|
 |tuneRFMMCE    |     0.0988|           0.9060|      0.1445|           0.2464|         193.5932|
 |tuneRFAUC     |     0.0991|           0.9088|      0.1456|           0.2483|         187.7843|
@@ -119,7 +112,7 @@ For the small and medium datasets we perform a 5-fold cross-validation and repea
 
 The average rank of all datasets can be seen in following table:
 
-|              | Error rate| (Multiclass) AUC| Brier Score| Logarithmic Loss| Training Runtime|
+|              |-Error rate|-(Multiclass) AUC|-Brier Score|-Logarithmic Loss|-Training Runtime|
 |:-------------|----------:|----------------:|-----------:|----------------:|----------------:|
 |tuneRFMMCE    |       4.28|             3.43|        4.53|             4.48|             5.40|
 |tuneRFAUC     |       3.98|             5.47|        4.50|             4.30|             4.73|
