@@ -19,7 +19,7 @@ I try to fill the gap for the random forest algorithm in R.
 
 ## Installation
 
-The installation of the R package can be done via `devtools::install_github("PhilippPro/tuneRF")`.
+The installation of the R package can be done via `devtools::install_github("PhilippPro/tuneRF")`
 
 ## Details
 
@@ -100,27 +100,29 @@ runtime bigger than 10 minutes are classified as big.
 For the small and medium datasets we perform a 5-fold cross-validation and repeat it 10 times. The average results for these 
 30 datasets can be seen in the table below. The ending of **tuneRF** specifies which measure was tuned. 
 
-|              |-Error rate|-(Multiclass) AUC|-Brier Score|-Logarithmic Loss|-Training Runtime|
-|:-------------|----------:|----------------:|-----------:|----------------:|----------------:|
-|tuneRFMMCE    |     0.0988|           0.9060|      0.1445|           0.2464|         193.5932|
-|tuneRFAUC     |     0.0991|           0.9088|      0.1456|           0.2483|         187.7843|
-|tuneRFBrier   |     0.0991|           0.9069|      0.1398|           0.2351|         183.6576|
-|tuneRFLogloss |     0.0995|           0.9073|      0.1398|           0.2338|         178.1290|
-|hyperopt      |     0.0979|           0.9064|      0.1440|           0.2484|         317.3986|
-|caret         |     0.1039|           0.9064|      0.1515|           0.2548|         168.3151|
-|ranger        |     0.1074|           0.9041|      0.1632|           0.2747|           3.9578|
+
+|              | -- Error rate| -- (Multiclass) AUC| -- Brier Score| -- Logarithmic Loss| -- Training Runtime|
+|:-------------|-------------:|-------------------:|--------------:|-------------------:|-------------------:|
+|tuneRFMMCE    |        0.0988|              0.9060|         0.1445|              0.2464|            193.5932|
+|tuneRFAUC     |        0.0991|              0.9088|         0.1456|              0.2483|            187.7843|
+|tuneRFBrier   |        0.0991|              0.9069|         0.1398|              0.2351|            183.6576|
+|tuneRFLogloss |        0.0995|              0.9073|         0.1398|              0.2338|            178.1290|
+|hyperopt      |        0.0979|              0.9064|         0.1440|              0.2484|            317.3986|
+|caret         |        0.1039|              0.9064|         0.1515|              0.2548|            168.3151|
+|ranger        |        0.1074|              0.9041|         0.1632|              0.2747|              3.9578|
 
 The average rank of all datasets can be seen in following table:
 
-|              |-Error rate|-(Multiclass) AUC|-Brier Score|-Logarithmic Loss|-Training Runtime|
-|:-------------|----------:|----------------:|-----------:|----------------:|----------------:|
-|tuneRFMMCE    |       4.28|             3.43|        4.53|             4.48|             5.40|
-|tuneRFAUC     |       3.98|             5.47|        4.50|             4.30|             4.73|
-|tuneRFBrier   |       2.92|             4.53|        1.60|             2.40|             4.97|
-|tuneRFLogloss |       3.33|             4.67|        2.17|             2.20|             4.17|
-|hyperopt      |       3.18|             3.27|        4.33|             5.05|             4.90|
-|caret         |       4.93|             3.42|        5.55|             4.85|             2.83|
-|ranger        |       5.37|             3.22|        5.32|             4.72|             1.00|
+|              | -- Error rate| -- (Multiclass) AUC| -- Brier Score| -- Logarithmic Loss| -- Training Runtime|
+|:-------------|-------------:|-------------------:|--------------:|-------------------:|-------------------:|
+|tuneRFMMCE    |          4.28|                3.43|           4.53|                4.48|                5.40|
+|tuneRFAUC     |          3.98|                5.47|           4.50|                4.30|                4.73|
+|tuneRFBrier   |          2.92|                4.53|           1.60|                2.40|                4.97|
+|tuneRFLogloss |          3.33|                4.67|           2.17|                2.20|                4.17|
+|hyperopt      |          3.18|                3.27|           4.33|                5.05|                4.90|
+|caret         |          4.93|                3.42|           5.55|                4.85|                2.83|
+|ranger        |          5.37|                3.22|           5.32|                4.72|                1.00|
+
 
 We see that on average the **tuneRF** methods outperform the **ranger** package and the **caret** package for all measures.
 Also tuning the specific measure does on average always provide the best results among all classifiers. This is also true 
