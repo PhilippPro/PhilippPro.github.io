@@ -30,27 +30,13 @@ with `estimateTuneRFTime`.
 ```{r}
 library(tuneRF)
 library(mlr)
-
-# A mlr task has to be created in order to use the package
 # We make an mlr task with the iris dataset here 
-# (Classification task with makeClassifTask, Regression Task with makeRegrTask)
 iris.task = makeClassifTask(data = iris, target = "Species")
-
 # Rough Estimation of the Tuning time
 estimateTuneRFTime(iris.task)
-
 # Tuning process (takes around 1 minute); Tuning measure is the multiclass brier score
-res = tuneRF(iris.task, measure = list(multiclass.brier), iters = 100, num.trees = 1000, 
-  num.threads = 2)
+res = tuneRF(iris.task, measure = list(multiclass.brier))
 res
-res$recommended.pars
-
-# Best 5 % of the results
-results = res$results
-results[results$multiclass.brier < quantile(results$multiclass.brier, 0.05),]
-
-# Restart after failing in one of the iterations:
-res = restartTuneRF("./optpath.RData", iris.task, measure = list(multiclass.brier))
 ```
 
 The execution of the tuning can be done with the `tuneRF` function. The `task` has to be passed as well as 
