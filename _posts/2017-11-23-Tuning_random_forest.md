@@ -125,7 +125,7 @@ as the execution of the tuning can be done in less than ten minutes, but plays a
 
 Below we see a graph that shows the average runtime for the algorithms.
 
-
+![graphic](/images/rf_tune_time.png "graphic")
 
 We see that for smaller datasets the runtime of **mlrHyperopt** is smaller than **tuneRF**, but when runtime increases it gets 
 worse and worse compared with the **tuneRF** algorithm. Because of this I think that **tuneRF** is preferable especially for 
