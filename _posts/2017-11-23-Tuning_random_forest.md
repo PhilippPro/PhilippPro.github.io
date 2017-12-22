@@ -41,7 +41,7 @@ res
 
 The execution of the tuning can be done with the `tuneRanger` function. The `task` has to be passed as well as 
 a `measure` that should be tuned. Which measures are available can be looked up on the
-[mlrtutorial](http://mlr-org.github.io/mlr-tutorial/release/html/measures/index.html) page. Typical measures in case of 
+[mlr tutorial](http://mlr-org.github.io/mlr-tutorial/release/html/measures/index.html) page. Typical measures in case of 
 classification are the mean missclassification rate (also calles error rate), the AUC, the brier score and the 
 logarithmic loss and the mean squared error in case of regression. 
 
