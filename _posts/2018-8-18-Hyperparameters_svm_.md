@@ -30,7 +30,7 @@ When using this kernel we only have one hyperparameter in SVM: The cost paramete
 
 The polynomial kernel is $K(x_i, x_j) = (r + \gamma \cdot x_i' x_j)^d$. 
 
-Usually the parameter $r$ is set to zero and $gamma$ to a fixed value, e.g. $1/n$ with $n$ being the number of observations. 
+Usually the parameter $r$ is set to zero and $\gamma$ to a fixed value, e.g. $1/n$ with $n$ being the number of observations. 
 Beside the cost parameter $C$ the integer parameter $d$ has to be tuned, usually values between 1 and 10 are chosen. 
 
 ## The radial kernel
