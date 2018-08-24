@@ -22,20 +22,20 @@ the performance of the algorithm.
 
 ## The linear kernel
 
-The linear kernel is $$K(x_i, x_j) = x_i' x_j$$.
+The linear kernel is $K(x_i, x_j) = x_i' x_j$.
 
 When using this kernel we only have one hyperparameter in SVM: The cost parameter $C$.
 
 ## The polynomial kernel
 
-The polynomial kernel is $K(x_i, x_j) = (r + \gamma * x_i' x_j)^d$ 
+The polynomial kernel is $$K(x_i, x_j) = (r + \gamma * x_i' x_j)^d$$. 
 
 Usually the parameter $r$ is set to zero and $gamma$ to a fixed value, e.g. $1/n$ with $n$ being the number of observations. 
 Beside the cost parameter $C$ the integer parameter $d$ has to be tuned, usually values between 1 and 10 are chosen. 
 
 ## The radial kernel
 
-The radial kernel is $K(x_i, x_j) =  e^{\gamma * x_i' x_j}$ 
+The radial kernel is $K(x_i, x_j) =  e^{\gamma * x_i' x_j}$.
 
 This kernel is the most used and most successful kernel, due to the flexibility of separating observations with this method. 
 Additionally to the cost parameter $C$, the hyperparameter $\gamma$ has to be tuned. 
