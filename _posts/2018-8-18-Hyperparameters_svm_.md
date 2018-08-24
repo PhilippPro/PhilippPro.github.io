@@ -20,8 +20,6 @@ There are multiple standard kernels for this transformations, e.g. the linear ke
 The choice of the kernel and their hyperparameters affect greatly the separability of the classes (in classification) and 
 the performance of the algorithm. 
 
-Test formula $$\gamma$$
-
 ## The linear kernel
 
 The linear kernel is $K(x_i, x_j) = x_i' x_j$.
@@ -30,18 +28,18 @@ When using this kernel we only have one hyperparameter in SVM: The cost paramete
 
 ## The polynomial kernel
 
-The polynomial kernel is $K(x_i, x_j) = (r + \gamma * x_i' x_j)^d$. 
+The polynomial kernel is $K(x_i, x_j) = (r + \gamma \cdot x_i' x_j)^d$. 
 
 Usually the parameter $r$ is set to zero and $gamma$ to a fixed value, e.g. $1/n$ with $n$ being the number of observations. 
 Beside the cost parameter $C$ the integer parameter $d$ has to be tuned, usually values between 1 and 10 are chosen. 
 
 ## The radial kernel
 
-The radial kernel is $K(x_i, x_j) =  e^{\gamma * x_i' x_j}$.
+The radial kernel is $K(x_i, x_j) =  e^{\gamma \cdot x_i' x_j}$.
 
 This kernel is the most used and most successful kernel, due to the flexibility of separating observations with this method. 
 Additionally to the cost parameter $C$, the hyperparameter $\gamma$ has to be tuned. 
-In the paper [A practical guide to Support Vector Classifier](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf) they recommend to search $C$ in the range $[2^{-5}; 2^{15}]$ and $\gamma$ in the range $[2^[-15];2^3]$. 
+In the paper [A practical guide to Support Vector Classifier](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf) they recommend to search $C$ in the range $[2^{-5}; 2^{15}]$ and $\gamma$ in the range $[2^{-15};2^3]$. 
 
 ## Tuning of the radial kernel in R
 
