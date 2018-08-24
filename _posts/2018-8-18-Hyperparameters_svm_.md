@@ -22,7 +22,7 @@ the performance of the algorithm.
 
 ## The linear kernel
 
-The linear kernel is $K(x_i, x_j) = x_i' x_j$.
+The linear kernel is $$K(x_i, x_j) = x_i' x_j$$.
 
 When using this kernel we only have one hyperparameter in SVM: The cost parameter $C$.
 
