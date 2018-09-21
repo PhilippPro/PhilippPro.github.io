@@ -29,21 +29,21 @@ For the 13 smallest datasets a 5-fold cross-validation with 10 repetitions is ex
 The mean missclassification error (also called error rate) can be seen in the following graph. 
 Some results of the tuning variants are not shown, as they took too much time for this exploratory analysis. 
 
-![graphic](e1071_vs_ksvm_vs_liquidSVM_mmce.png "graphic")
+![graphic](/images/e1071_vs_ksvm_vs_liquidSVM_mmce.png "graphic")
 
 The default of **e1071** is slightly worse than the default of **kernlab**. 
 The two **mlrHyperopt** tuning variants are equal or better than these two defaults, in several datasets tuning provides a better error rate than the default version, which underlines the necessity of tuning the support vector machine. The **liquidSVM** implementation is nearly always equally good as the two tuning variants, which is not surprising as there is an internal tuning in the package. 
 
 The next graph shows the runtime of the different implementations.
 
-![graphic](e1071_vs_ksvm_vs_liquidSVM_runtime.png "graphic")
+![graphic](/images/e1071_vs_ksvm_vs_liquidSVM_runtime.png "graphic")
 
 It can be seen, that the runtime of the tuning algorithms is ok for smaller datasets, but for bigger datasets it raises up extremely and makes the execution infeasible. 
 The runtime of the default of **kernlab** is slightly better than for **e1071**. The **liquidSVM** is nearly as fast as the default of the other packages and increases less than the other defaults for bigger datasets. There are also parallelizing options in the package and some other options for big datasets, which makes this package extremely well suited for bigger datasets. 
 
 Here is also a graph showing the runtimes on a log scale:
 
-![graphic](e1071_vs_ksvm_vs_liquidSVM_runtime.png "graphic")
+![graphic](/images/e1071_vs_ksvm_vs_liquidSVM_runtime.png "graphic")
 
 All in all I can warmly recommend the **liquidSVM** package. There are still some problems in the R-Version when using probability predictions, but hopefully they will be solved soon. 
 
