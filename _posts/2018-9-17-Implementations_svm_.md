@@ -43,7 +43,7 @@ The runtime of the default of **kernlab** is slightly better than for **e1071**.
 
 Here is also a graph showing the runtimes on a log scale:
 
-![graphic](/images/e1071_vs_ksvm_vs_liquidSVM_runtime.png "graphic")
+![graphic](/images/e1071_vs_ksvm_vs_liquidSVM_runtime_logscale.png "graphic")
 
 All in all I can warmly recommend the **liquidSVM** package. There are still some problems in the R-Version when using probability predictions, but hopefully they will be solved soon. 
 
