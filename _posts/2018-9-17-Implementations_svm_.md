@@ -23,7 +23,7 @@ In **liquidSVM** as default a grid search on $\gamma$ and the cost parameter is 
 
 Moreover I do tuning via model-based optimization (MBO) for **e1071** and **kernlab**. 
 For this I use the package [mlrHyperopt](https://github.com/jakob-r/mlrHyperopt) that uses internally [mlrMBO](https://github.com/mlr-org/mlrMBO) for tuning. I set the hyperparameter ranges according to the popular paper [A practical guide to Support Vector Classifier](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf), which means sampling $\gamma \in \[2^{-15}, 2^3\]$ and the cost 
-parameter $C \in \[2^{-5}, 2^15\]$ (sampling with equal distribution from $\[-15,3\]$ and $\[-5,15\]$ respectively and transforming them via the function $2^x$).
+parameter $C \in \[2^{-5}, 2^{15}\]$ (sampling with equal distribution from $\[-15,3\]$ and $\[-5,15\]$ respectively and transforming them via the function $2^x$).
 
 For the 13 smallest datasets a 5-fold cross-validation with 10 repetitions is executed, for the others a 5-fold cross-validation. 
 The mean missclassification error (also called error rate) can be seen in the following graph. 
