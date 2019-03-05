@@ -25,7 +25,7 @@ The installation of the R package can be done via `devtools::install_github("Phi
 
 Here is a brief R-Code that shows how it works. We need also the [mlr](https://github.com/mlr-org/mlr) package to make it run. 
 First a mlr task has to be created via `makeClassifTask` or `makeRegrTask`. After that the runtime of the tuning can be estimated 
-with `estimateTuneRFTime`. 
+with `estimateTimeTuneRanger`. 
 
 ```{r}
 library(tuneRanger)
@@ -33,7 +33,7 @@ library(mlr)
 # We make an mlr task with the iris dataset here 
 iris.task = makeClassifTask(data = iris, target = "Species")
 # Rough Estimation of the Tuning time
-estimateTuneRangerTime(iris.task)
+estimateTimeTuneRanger(iris.task)
 # Tuning process (takes around 1 minute); Tuning measure is the multiclass brier score
 res = tuneRanger(iris.task, measure = list(multiclass.brier))
 res
@@ -130,5 +130,7 @@ Below we see a graph that shows the average runtime for the algorithms.
 We see that for smaller datasets the runtime of **mlrHyperopt** is smaller than **tuneRanger**, but when runtime increases 
 it gets worse and worse compared with the **tuneRanger** algorithm. Because of this I think that **tuneRanger** is 
 preferable especially for bigger datasets, when runtime also plays a more important role. 
+
+The code is available [here](https://github.com/PhilippPro/tuneRanger/blob/master/benchmark/benchmark.R).
 
 In a following blog post I will post results for bigger datasets. 
