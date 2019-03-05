@@ -15,6 +15,6 @@ I usually also hand it over to them.
 
 ![graphic](/images/Overview_statistical_tests.png "graphic")
 
-Here another table for the creation of interesting plots. This graph is not yet fully completed. 
+Here another table for the creation of interesting plots. This table is not yet fully completed. 
 
 ![graphic](/images/Overview_statistical_plots.png "graphic")
