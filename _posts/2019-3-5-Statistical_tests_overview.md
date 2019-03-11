@@ -15,6 +15,10 @@ I usually also hand it over to them.
 
 ![graphic](/images/Overview_statistical_tests.png "graphic")
 
+[PDF](/images/Overview_statistical_tests.pdf)
+
 Here another table for the creation of interesting plots. This table is not yet fully completed. 
 
 ![graphic](/images/Overview_statistical_plots.png "graphic")
+
+[PDF](/images/Overview_statistical_plots.pdf)
