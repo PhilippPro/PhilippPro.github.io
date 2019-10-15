@@ -6,8 +6,12 @@ permalink: /about/
 
 Master of Science in Statistics at TU Dortmund
 
-Currently PhD Student at 
-[IBE LMU Munich](http://www.ibe.med.uni-muenchen.de/organisation/mitarbeiter/070_drittmittel/probst/index.html)
+PhD Student at 
+[IBE LMU Munich](http://philipppro.github.io/)
+
+After doing an amazing bike trip from Germany to Croatia, I am searching for new job opportunities, ideally in the surroundings of Munich. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
+
+## Miscellaneous
 
 I am (was) active on [Kaggle](https://www.kaggle.com/icedragon).
 
