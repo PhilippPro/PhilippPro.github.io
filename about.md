@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-After doing an amazing bike trip from Germany to Croatia, I am searching for new job opportunities, ideally in the surroundings of Munich or as a freelancer. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
+After doing an amazing bike trip from Germany to Croatia, I am searching for new job opportunities in the surroundings of Munich or as a freelancer. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
 
 [My Publications](https://scholar.google.de/citations?user=sQ-zbvkAAAAJ&hl=de)
 
