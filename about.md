@@ -6,8 +6,7 @@ permalink: /about/
 
 Master of Science in Statistics at TU Dortmund
 
-PhD Student at 
-[IBE LMU Munich](http://philipppro.github.io/)
+PhD at [IBE LMU Munich](http://philipppro.github.io/)
 
 After doing an amazing bike trip from Germany to Croatia, I am searching for new job opportunities, ideally in the surroundings of Munich. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
 
