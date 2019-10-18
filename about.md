@@ -6,7 +6,7 @@ permalink: /about/
 
 ## The blog
 
-This blog is mainly about topics in machine learning, statistics and R that I am interested in.
+This blog is mainly about topics in machine learning, statistics and R.
 
 ## Me
 
