@@ -4,6 +4,12 @@ title: About
 permalink: /about/
 ---
 
+## The blog
+
+This blog is mainly about topics in machine learning, statistics and R that I am interested in.
+
+## Me
+
 After doing an amazing bike trip from Germany to Croatia, I am searching for new opportunities in the surroundings of Munich or as a freelancer. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
 
 [My Publications](https://scholar.google.de/citations?user=sQ-zbvkAAAAJ&hl=de)
