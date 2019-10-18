@@ -19,6 +19,8 @@ I was active on [Kaggle](https://www.kaggle.com/icedragon).
 
 A nice blog aggregator for blogs in the R-world is [https://www.r-bloggers.com](https://www.r-bloggers.com).
 
+RSS-feed: [RSS](http://philipppro.github.io/feed.xml)
+
 ### Contact me
 
 [philipp_probst@gmx.de](mailto:philipp_probst@gmx.de)
