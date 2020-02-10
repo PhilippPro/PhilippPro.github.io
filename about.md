@@ -10,7 +10,7 @@ This blog is mainly about topics in machine learning, statistics and R.
 
 ## Me
 
-After doing an amazing bike trip from Germany to Croatia, I am searching for new opportunities in the surroundings of Munich or as a freelancer. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
+I am now working for [Digital Ratio](https://www.digital-ratio.de/) as a data science consultant. Feel free to [contact me](mailto:philipp_probst@gmx.de). 
 
 [My Publications](https://scholar.google.de/citations?user=sQ-zbvkAAAAJ&hl=de)
 
