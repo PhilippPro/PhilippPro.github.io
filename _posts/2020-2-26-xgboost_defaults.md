@@ -17,11 +17,15 @@ parameters to get optimal defaults.
 
 <!--excerpt-->
 
-I used the same method as mentioned in the paper with the 38 classification datasets and obtained the following defaults:
+I used the same method as mentioned in the paper with the 38 classification datasets and obtained the following (rounded) defaults:
 
-| nrounds|       eta| subsample|booster | max_depth| min_child_weight| colsample_bytree| colsample_bylevel|
-|-------:|---------:|---------:|:-------|---------:|----------------:|----------------:|-----------------:|
-|     500| 0.0518715| 0.8734055|gbtree  |        11|         1.750185|        0.7126651|         0.6375492|
+| nrounds|       eta| subsample|booster | max_depth|
+|-------:|---------:|---------:|:-------|---------:|
+|     500|     0.052|      0.87|gbtree  |        11|
+
+| min_child_weight| colsample_bytree| colsample_bylevel|
+|----------------:|----------------:|-----------------:|
+|             1.75|             0.71|              0.64|
 
 Now I wanted to know how well this defaults perform on other tasks. So I took a collection of 29 regression tasks of different 
 domains, that I collected from different sources such as [OpenML](https://www.openml.org/) and compared my 
@@ -56,3 +60,4 @@ for the classification datasets. Also not a very big difference, so this is not 
 In my next blog entry I will talk a bit about **catboost** and **lightGBM**. 
 Especially the first one promises to provide much better default performances than **xgboost** and I will compare it with the random forest 
 implementation **ranger** and the support vector machine implementation **liquidSVM** in their default state. 
+
