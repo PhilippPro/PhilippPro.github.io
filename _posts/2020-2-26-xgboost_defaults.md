@@ -19,13 +19,13 @@ parameters to get optimal defaults.
 
 I used the same method as mentioned in the paper with the 38 classification datasets and obtained the following (rounded) defaults:
 
-| nrounds|       eta| subsample|booster | max_depth|
-|-------:|---------:|---------:|:-------|---------:|
-|     500|     0.052|      0.87|gbtree  |        11|
+| **nrounds**|       **--eta**| **--subsample**|**--booster**| **--max_depth**|
+|-----------:|---------------:|---------------:|:------------|----------------:|
+|         500|           0.052|            0.87|     gbtree  |               11|
 
-| min_child_weight| colsample_bytree| colsample_bylevel|
-|----------------:|----------------:|-----------------:|
-|             1.75|             0.71|              0.64|
+| **--min_child_weight**| **--colsample_bytree**| **--colsample_bylevel**|
+|----------------------:|----------------------:|-----------------------:|
+|                   1.75|                   0.71|                    0.64|
 
 Now I wanted to know how well this defaults perform on other tasks. So I took a collection of 29 regression tasks of different 
 domains, that I collected from different sources such as [OpenML](https://www.openml.org/) and compared my 
