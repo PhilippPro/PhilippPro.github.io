@@ -91,8 +91,12 @@ mlr is better here.
 
 ## Learners
 
-Currently 271 learners are supported in caret. For mlr it is ''only'' 165. I think bigger quantity is not very important here, as the most common and most important learners are implemented in both packages. What is clearly missing is a list of recommended learners in both packages. New users just have to look for the ''standard'' packages, without knowing if they are good or if there are possibly better implementations. mlr provides an easy way to look up the learners and their properties via ```listLearners()``` or via the [tutorial]((https://mlr.mlr-org.com/index.html)) in a table format. Learners for caret can be looked up in the tutorial, [chapter 7](http://topepo.github.io/caret/train-models-by-tag.html). 
+Currently 271 learners are supported in caret. For mlr it is ''only'' 165. I think bigger quantity is not very important here, as the most common and most important learners are implemented in both packages. 
+
+mlr provides an easy way to look up the learners and their properties via ```listLearners()``` or via the [tutorial]((https://mlr.mlr-org.com/index.html)) in a table format. Learners for caret can be looked up in the tutorial, [chapter 7](http://topepo.github.io/caret/train-models-by-tag.html). 
 Both packages provide the possibility to extend the learners. 
+
+What is clearly missing is a list of recommended learners in both packages. New users just have to look for the ''standard'' packages, without knowing if they are good or if there are possibly better implementations. 
 
 No clear winner here, although documentation seems to be better for mlr here.
 
@@ -130,6 +134,14 @@ Visualising your results and getting informations about your models is an import
 
 No clear winner here. 
 
+## Datasets
+
+Datasets can be nice for illustration and testing purposes. 
+caret comes with 10 datasets, which are nicely [documented](http://topepo.github.io/caret/data-sets.html).
+mlr provides 16 already build tasks. Moreover there is a nice connection to the [OpenML](https://github.com/openml/openml-r) package and its [online platform](https://www.openml.org/) with over 20000 datasets from all domains. 
+
+Advantage for mlr here. 
+
 # Speed
 
 There shouldn't be a big time difference for the operations of the package itself as most of the operations are not computationally intensive. 
@@ -163,7 +175,7 @@ mlr developers are currently working on [mlr3](https://github.com/mlr-org/mlr3) 
 
 # Overall result
 
-Counting together all categories mlr wins by 12:7. 
+Counting together all categories mlr wins by 13:7. 
 
 ## Overview in table
 
