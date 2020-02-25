@@ -27,11 +27,14 @@ I used the same method as mentioned in the paper with the 38 classification data
 |----------------------:|-----------------------:|
 |                   0.71|                    0.64|
 
+### Performance on 29 regression datasets
+
 Now I wanted to know how well this defaults perform on other tasks. So I took a collection of 29 regression tasks of different 
 domains, that I collected from different sources such as [OpenML](https://www.openml.org/) and compared my 
-defaults against the defaults of **xgboost** with **nrounds**=500. 
+defaults against the defaults of **xgboost** with **nrounds**=500. Code can be seen [here](https://github.com/PhilippPro/OpenML-bench-regr/blob/master/R/benchmark_xgboost_500.R)
 
-The results were not really mindblowing. Here you can see performance graphs for two different measures (R-Squared and Spearman's Rho):
+The results were not really mindblowing. Here you can see performance graphs for two different measures (R-Squared and Spearman's Rho) 
+using 5-fold CV:
 
 ![graphic](/images/xgboost_500_rsq_results.png "graphic")
 
@@ -54,6 +57,15 @@ than the package defaults.
 
 In my [paper](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf) I could get an average improvement of 0.029 in AUC
 for the classification datasets with my defaults. Also not a very big difference, so this is not very surprising. 
+
+### Runtime
+
+The runtime was a bit longer with my defaults, but not really much longer. You can see the runtime below:
+
+![graphic](/images/xgboost_500_time_results.png "graphic")
+
+All in all the datasets that I used were rather small, so bigger datasets would provide more interesting results. 
+
 
 ## Further work
 
