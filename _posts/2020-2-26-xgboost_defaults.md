@@ -19,9 +19,9 @@ parameters to get optimal defaults.
 
 I used the same method as mentioned in the paper with the 38 classification datasets and obtained the following (rounded) defaults:
 
-| **nrounds**|       **----eta**| **--subsample**|**--booster**| **--max_depth**| **--min_child_weight**|
-|-----------:|-----------------:|---------------:|:------------|----------------:|----------------------:|
-|         500|             0.052|            0.87|      gbtree|               11|                   1.75|
+| **nrounds**|       **-----eta**| **--subsample**|**--booster**| **--max_depth**| **--min_child_weight**|
+|-----------:|------------------:|---------------:|:-------------|----------------:|----------------------:|
+|         500|              0.052|            0.87|        gbtree|               11|                   1.75|
 
 | **--colsample_bytree**| **--colsample_bylevel**|
 |----------------------:|-----------------------:|
