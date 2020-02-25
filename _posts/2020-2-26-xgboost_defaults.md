@@ -53,7 +53,7 @@ So all in all my new defaults do not provide a very big performance gain (on ave
 than the package defaults. 
 
 In my [paper](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf) I could get an average improvement of 0.029 in AUC
-for the classification datasets. Also not a very big difference, so this is not very surprising. 
+for the classification datasets with my defaults. Also not a very big difference, so this is not very surprising. 
 
 ## Further work
 
