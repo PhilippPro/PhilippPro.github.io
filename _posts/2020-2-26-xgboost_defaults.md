@@ -42,10 +42,10 @@ Spearman's Rho (a nonparametric measure).
 
 The average values can be seen in the following table:
 
-|             | xgboost_old_default| xgboost_my_default|
-|:------------|-------------------:|------------------:|
-|R-squared    |               0.614|              0.645|
-|Spearman Rho |               0.775|              0.780|
+|             |--xgboost_old_default|--xgboost_my_default|
+|:------------|--------------------:|-------------------:|
+|R-squared    |                0.614|               0.645|
+|Spearman Rho |                0.775|               0.780|
 
 The percentage of datasets where my new defaults are better than the old defaults is 66% for R$^2$ and 62% for Spearman's Rho. 
 
