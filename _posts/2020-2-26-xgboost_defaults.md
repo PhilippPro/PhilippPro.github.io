@@ -12,7 +12,7 @@ In one of my [publications](http://www.jmlr.org/papers/volume20/18-444/18-444.pd
 and one of the packages that I used there was **xgboost**. The results provided a default with 
 the parameter *nrounds*=4168, which leads to long runtimes. 
 
-Hence I wanted to use the data used in the paper to set *nrounds* to 500 and optimize the other 
+Hence, I wanted to use the data used in the paper to set *nrounds* to 500 and optimize the other 
 parameters to get optimal defaults. 
 
 <!--excerpt-->
@@ -31,10 +31,10 @@ I used the same method as mentioned in the paper with the 38 classification data
 
 Now I wanted to know how well this defaults perform on other tasks. So I took a collection of 29 regression tasks of different 
 domains, that I collected from different sources such as [OpenML](https://www.openml.org/) and compared my 
-defaults against the defaults of **xgboost** with **nrounds**=500. Code can be seen [here](https://github.com/PhilippPro/OpenML-bench-regr/blob/master/R/benchmark_xgboost_500.R)
+defaults against the defaults of **xgboost** with **nrounds**=500. Code can be seen [here](https://github.com/PhilippPro/OpenML-bench-regr/blob/master/R/benchmark_xgboost_500.R).
 
 The results were not really mindblowing. Here you can see performance graphs for two different measures (R-Squared and Spearman's Rho) 
-using 5-fold CV:
+using 10 times repeated 5-fold CV:
 
 ![graphic](/images/xgboost_500_rsq_results.png "graphic")
 
@@ -47,10 +47,10 @@ The average values can be seen in the following table:
 
 |             |--xgboost_old_default|--xgboost_my_default|
 |:------------|--------------------:|-------------------:|
-|R-squared    |                0.614|               0.645|
-|Spearman Rho |                0.775|               0.780|
+|R-squared    |                0.610|               0.645|
+|Spearman Rho |                0.775|               0.785|
 
-The percentage of datasets where my new defaults are better than the old defaults is 66% for R$^2$ and 62% for Spearman's Rho. 
+The percentage of datasets where my new defaults are better than the old defaults is 66% for R$^2$ and 75% for Spearman's Rho. 
 
 So all in all my new defaults do not provide a very big performance gain (on average 0.03 or R$^2$), but seem to be better 
 than the package defaults. 
