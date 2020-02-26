@@ -64,6 +64,8 @@ The runtime was a bit longer with my defaults, but not really much longer. You c
 
 ![graphic](/images/xgboost_500_time_results.png "graphic")
 
+The longer runtime is mainly due to the *max_depth* parameter, which I set bigger (11 instead of 6).
+
 All in all the datasets that I used were rather small, so bigger datasets would provide more interesting results. 
 
 
