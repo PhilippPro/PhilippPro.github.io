@@ -21,7 +21,7 @@ I used the same method as mentioned in the paper with the 38 classification data
 
 | **nrounds**|       **-----eta**| **--subsample**|**--booster**| **--max_depth**| **--min_child_weight**|
 |-----------:|------------------:|---------------:|:-------------|----------------:|----------------------:|
-|         500|              0.052|            0.87|        gbtree|               11|                   1.75|
+|         500|              0.052|            0.87|        gbtree|               11|                      2|
 
 | **--colsample_bytree**| **--colsample_bylevel**|
 |----------------------:|-----------------------:|
