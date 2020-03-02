@@ -75,3 +75,10 @@ In my next blog entry I will talk a bit about **catboost** and **lightGBM**.
 Especially the first one promises to provide much better default performances than **xgboost** and I will compare it with the random forest 
 implementation **ranger** and the support vector machine implementation **liquidSVM** in their default state. 
 
+## PS:
+
+I thought again about the results. Some conclusions regarding the parameters:
+
+- In the section with low R-squared the default of xgboost performs much worse than my defaults. These are datasets that are hard to fit and few things can be learned. The higher eta (eta=0.1) leads to too much overfitting compared to my defaults (eta=0.05). If you would set nrounds lower than 500 the effect would be smaller. You could leave eta=0.1 but set nrounds to a lower default value. 
+- I am not sure how big is the effect for max_depth. In my [paper](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf) the effect was quite small, so you could leave it on 5 to get better runtimes.
+- The subsample and colsample parameters could be safely set to values between 0.6 and 0.8 to get better results.
