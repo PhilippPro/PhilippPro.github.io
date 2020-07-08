@@ -26,20 +26,20 @@ The instructions can be found [here](https://github.com/Microsoft/LightGBM/tree/
 
 ## Algorithm versions
 
-The algorithms are used with their most actual version on first of March. **checkpoint** R package is used to obtain the correct versions on these dates for the packages available on CRAN. For the other I took the version on github available on this date. 
+The algorithms are used with their most actual version on first of March. **checkpoint** R package is used to obtain the correct versions on this date for the packages available on CRAN. For the other I took the version on github available on this date. 
 
 ## Parameter settings
 
 I use the algorithms mainly with their default parameter settings:
 
-- **catboost** is used with its default settings
-- On the **lightgbm** page it is recommended to use the following setting, which I use: nrounds=500, learning_rate=0.1, num_threads=5
+- **catboost** is used with its package default settings
+- On the **lightgbm** page it is recommended to use the following settings, which I use: nrounds=500, learning_rate=0.1, num_threads=5
 - For xgboost I use their default setting with 500 rounds (**xgboost_def**)
-- Moreover I set up a second xgboost version (**xgboost_best**) with the best parameter settings that I obtained in on of my [papers](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf). These are: nrounds=500, eta=0.0518715, subsample=0.8734055, booster="gbtree", max_depth=11, min_child_weight=1.750185, colsample_bytree=0.7126651, colsample_bylevel=0.6375492.
+- Moreover I set up a second xgboost version (**xgboost_best**) with the best parameter settings that I obtained in on of my [publications](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf). These are: nrounds=500, eta=0.0518715, subsample=0.8734055, booster="gbtree", max_depth=11, min_child_weight=1.750185, colsample_bytree=0.7126651, colsample_bylevel=0.6375492.
 
 ## Multi threading
 
-All algorithms provide parallel execution on several CPUs. I used 5 threads for each algorithm. 
+All algorithms provide parallel execution on several CPU threads. I used 5 threads for each algorithm. 
 
 ## Adjustments for categorical data
 
@@ -63,7 +63,11 @@ I excluded the datasets "aloi", "BNG(satellite_image)" and "black_friday", becau
 
 I used 10-times repeated 5-fold crossvalidation for each of the algorithms to estimate the performance of the algorithms on the datasets. I use the measures R-Squared and the non-parametric measure Spearmans-Rho, which only evaluates, if the observations are predicted in the correct order. 
 
-## Performance
+## Code
+
+The code is available on this github page: [OpenML-bench](https://github.com/PhilippPro/OpenML-bench/blob/master/R/main.R).
+
+## Results
 
 The results for R-Squared can be seen here:
 
@@ -84,11 +88,11 @@ In the following we can see the average calculation time results:
 
 ![graphic](/images/time_results.png "graphic")
 
-The datasets are rather small, so the calculation time is also rather small (below 30 seconds on 5 CPU threads). **catboost** and **xgboost_best** have longest runtimes **lightgbm* is the fastest. 
+The datasets are rather small, so the calculation time is also rather small (below 30 seconds on 5 CPU threads). **catboost** and **xgboost_best** have longest runtimes **lightgbm** is the fastest. 
 
 ## Further work
 
-Results for classification will follow in a future blog post. If you have comments to the analysis or better defaults of the packages or other comparable packages, let me know. Some of the algorithms are still under development, so results may change. 
+Results for classification will follow in a future blog post. If you have comments to the analysis, better defaults of the packages or other comparable packages, let me know. Some of the algorithms are still under development, so results may change. 
 
 ## Annex
 
