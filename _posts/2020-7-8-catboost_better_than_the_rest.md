@@ -28,14 +28,18 @@ The instructions can be found [here](https://github.com/Microsoft/LightGBM/tree/
 
 The algorithms are used with their most actual version on first of March. **checkpoint** R package is used to obtain the correct versions on this date for the packages available on CRAN. For the other I took the version on github available on this date. 
 
+## Why using the defaults?
+
+To be honest, I am a rather lazy guy. I do not want to do a lot of manual tuning and modern algorithms should provide automatic tuning. We are in the era of self-driving cars but should still tune our algorithms by hand? I am aware, that especially in gradient boosting tuning provides performance improvements, but I will not do the tuning in this benchmark here. 
+
 ## Parameter settings
 
-I use the algorithms mainly with their default parameter settings:
+I try to use the algorithms with as less adjustments as possible. I had a quick look on their documentation page and set the parameters as follows:
 
 - **catboost** is used with its package default settings
 - On the **lightgbm** page it is recommended to use the following settings, which I use: nrounds=500, learning_rate=0.1, num_threads=5
 - For xgboost I use their default setting with 500 rounds (**xgboost_def**)
-- Moreover I set up a second xgboost version (**xgboost_best**) with the best parameter settings that I obtained in on of my [publications](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf). These are: nrounds=500, eta=0.0518715, subsample=0.8734055, booster="gbtree", max_depth=11, min_child_weight=1.750185, colsample_bytree=0.7126651, colsample_bylevel=0.6375492.
+- Moreover I set up a second xgboost version (**xgboost_best**) with the best parameter settings that I obtained in one of my [publications](http://www.jmlr.org/papers/volume20/18-444/18-444.pdf). These are: nrounds=500, eta=0.0518715, subsample=0.8734055, booster="gbtree", max_depth=11, min_child_weight=1.750185, colsample_bytree=0.7126651, colsample_bylevel=0.6375492.
 
 ## Multi threading
 
