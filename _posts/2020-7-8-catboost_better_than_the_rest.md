@@ -26,7 +26,7 @@ The instructions can be found [here](https://github.com/Microsoft/LightGBM/tree/
 
 ## Algorithm versions
 
-The algorithms are used with their most actual version on first of March. **checkpoint** R package is used to obtain the correct versions on this date for the packages available on CRAN. For the other I took the version on github available on this date. 
+The algorithms are used with their most actual version on first of March 2020. **checkpoint** R package is used to obtain the correct versions on this date for the packages available on CRAN. For the other I took the version on github available on this date. 
 
 ## Why using the defaults?
 
